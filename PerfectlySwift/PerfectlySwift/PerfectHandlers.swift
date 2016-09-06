@@ -8,8 +8,12 @@
 
 import Foundation
 import PerfectLib
+import PostgreSQL
 
-let DB_PATH = PerfectServer.staticPerfectServer.homeDir() + serverSQLiteDBs + "PWSDB"
+let dbHost = "localhost"
+let dbName = "perfectlySwift"
+let dbUsername = "siavashabbasalipour"
+let dbPassword = ""
 
 public func PerfectServerModuleInit() {
     
@@ -25,46 +29,54 @@ public func PerfectServerModuleInit() {
         return PostHandler()
     }
     
-    // initialise a SQLite db
-    do {
-        let sqlite = try SQLite(DB_PATH)
-        try sqlite.execute("CREATE TABLE IF NOT EXISTS pws (id INTEGER PRIMARY KEY, content STRING)")
-    } catch let error {
-        print(error)
-    }
+}
+
+func createPostgreSQLAndConnect() -> PGConnection {
+    // open postgre db
+    let postgre = PostgreSQL.PGConnection()
+    // connect to db
+    postgre.connectdb("host='\(dbHost)' dbname='\(dbName)' user='\(dbUsername)' password='\(dbPassword)'")
+    return postgre
 }
 
 class GetPostHandler: RequestHandler {
     func handleRequest(request: WebRequest, response: WebResponse) {
+
+        let postgre = createPostgreSQLAndConnect()
         
-        do {
-            let sqlite = try SQLite(DB_PATH)
-            defer {
-                sqlite.close()
-            }
-            // query db
-            try sqlite.forEachRow("SELECT content FROM pws ORDER BY RANDOM() LIMIT 1", handleRow: { (statement, i) in
-                do {
-                    let content = statement.columnText(0)
-                    // encode the random content into JSON
-                    let jsonEncoder = JSONEncoder()
-                    let respString = try jsonEncoder.encode(["content": content])
-                    
-                    // write the JSON to the response body
-                    response.appendBodyString(respString)
-                    response.addHeader("Content-Type", value: "application/json")
-                    response.setStatus(200, message: "OK")
-                    
-                } catch let error {
-                    response.setStatus(400, message: "Bad Request")
-                    print(error)
-                }
-            })
-        } catch let error {
-            response.setStatus(400, message: "Bad Request")
-            print(error)
+        defer {
+            postgre.close()
         }
         
+        guard postgre.status() != .Bad else {
+            response.setStatus(500, message: "Internal Server Error - failed to connect to db")
+            return
+        }
+        // execute query
+        let queryResult = postgre.exec("SELECT content FROM perfect ORDER BY RANDOM() LIMIT 1")
+        guard queryResult.status() == .CommandOK || queryResult.status() == .TuplesOK else {
+            response.setStatus(500, message: "Internal Server Error - db query error")
+            return
+        }
+        guard case let numberOfFields = queryResult.numFields() where numberOfFields != 0 else {
+            response.setStatus(500, message: "Internal Server Error - db returned nothing")
+            return
+        }
+        guard case let numberOfRows = queryResult.numTuples() where numberOfRows != 0 else {
+            response.setStatus(204, message: "Internal Server Error - query returned empty result")
+            return
+        }
+        let fieldName = queryResult.fieldName(0)
+        let jsonEncoder = JSONEncoder()
+        do {
+            let responseString = try jsonEncoder.encode([fieldName!:queryResult.getFieldString(0, fieldIndex: 0)])
+            // write the JSON to the response body
+            response.appendBodyString(responseString)
+            response.addHeader("Content-Type", value: "application/json")
+            response.setStatus(200, message: "OK")
+        } catch {
+            print("jsonencoder error!")
+        }
         response.requestCompletedCallback()
     }
 }
@@ -90,17 +102,13 @@ class PostHandler: RequestHandler {
                 return
             }
             
-            // put the content in our Db
-            let sqlite = try SQLite(DB_PATH)
+            let postgre = createPostgreSQLAndConnect()
             
-            // ensure to close the db connection when we are finish
             defer {
-                sqlite.close()
+                postgre.close()
             }
-            // put the content in db
-            try sqlite.execute("INSERT INTO pws (content) VALUES (?)", doBindings: { (statement) in
-              try statement.bind(1, content!)
-            })
+            
+            postgre.exec("INSERT INTO perfect (content) VALUES ('\(content!)')")
             
             response.setStatus(201, message: "Created")
             
