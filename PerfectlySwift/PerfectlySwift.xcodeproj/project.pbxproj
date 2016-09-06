@@ -8,12 +8,108 @@
 
 /* Begin PBXBuildFile section */
 		F06C28E41D7D3065001C3EF6 /* PerfectlySwift.h in Headers */ = {isa = PBXBuildFile; fileRef = F06C28E31D7D3065001C3EF6 /* PerfectlySwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F06C290D1D7E2C82001C3EF6 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06C28FC1D7E2BB3001C3EF6 /* PerfectLib.framework */; };
+		F06C290E1D7E2C82001C3EF6 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06C29001D7E2BB3001C3EF6 /* PerfectLib.framework */; };
+		F06C290F1D7E2C82001C3EF6 /* PostgreSQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06C28F21D7E2BAB001C3EF6 /* PostgreSQL.framework */; };
+		F06C29191D7E34D2001C3EF6 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06C29161D7E34CC001C3EF6 /* MySQL.framework */; };
+		F06C29211D7E3519001C3EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C29201D7E3519001C3EF6 /* AppDelegate.swift */; };
+		F06C29231D7E3519001C3EF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C29221D7E3519001C3EF6 /* MainViewController.swift */; };
+		F06C29261D7E3519001C3EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06C29241D7E3519001C3EF6 /* Main.storyboard */; };
+		F06C29281D7E3519001C3EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06C29271D7E3519001C3EF6 /* Assets.xcassets */; };
+		F06C292B1D7E3519001C3EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06C29291D7E3519001C3EF6 /* LaunchScreen.storyboard */; };
+		F06C29311D7E3556001C3EF6 /* PerfectHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C29301D7E3556001C3EF6 /* PerfectHandlers.swift */; };
+		F06C29321D7E5053001C3EF6 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06C29001D7E2BB3001C3EF6 /* PerfectLib.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F06C28F11D7E2BAB001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C28EB1D7E2BAB001C3EF6 /* PostgreSQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F28A6E1BD57D8900367249;
+			remoteInfo = PostgreSQL;
+		};
+		F06C28F31D7E2BAB001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C28EB1D7E2BAB001C3EF6 /* PostgreSQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F28A781BD57D8A00367249;
+			remoteInfo = PostgreSQLTests;
+		};
+		F06C28FB1D7E2BB3001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F289BE1BD53CF000367249;
+			remoteInfo = PerfectLibOSX;
+		};
+		F06C28FD1D7E2BB3001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F289C81BD53CF000367249;
+			remoteInfo = PerfectLibOSXTests;
+		};
+		F06C28FF1D7E2BB3001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F28A381BD5633100367249;
+			remoteInfo = PerfectLibiOS;
+		};
+		F06C29071D7E2BBA001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F842421B1BD966FC001EFF66;
+			remoteInfo = "PerfectServer FastCGI";
+		};
+		F06C29091D7E2BBA001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8E752DF1BDA8A7600BFC36A;
+			remoteInfo = "PerfectServer HTTP";
+		};
+		F06C290B1D7E2BBA001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F88B06811BDD48DD001FD0CD;
+			remoteInfo = "PerfectServer HTTP App";
+		};
+		F06C29151D7E34CC001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C29101D7E34CC001C3EF6 /* MySQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F832F6211BD6821D008593A8;
+			remoteInfo = MySQL;
+		};
+		F06C29171D7E34CC001C3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06C29101D7E34CC001C3EF6 /* MySQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F832F62B1BD6821D008593A8;
+			remoteInfo = MySQLTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F06C28E01D7D3065001C3EF6 /* PerfectlySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PerfectlySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06C28E31D7D3065001C3EF6 /* PerfectlySwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfectlySwift.h; sourceTree = "<group>"; };
 		F06C28E51D7D3065001C3EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06C28EB1D7E2BAB001C3EF6 /* PostgreSQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PostgreSQL.xcodeproj; path = "../../Perfect-release-1.0-2.1/Connectors/PostgreSQL/PostgreSQL.xcodeproj"; sourceTree = "<group>"; };
+		F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PerfectLib.xcodeproj; path = "../../Perfect-release-1.0-2.1/PerfectLib/PerfectLib.xcodeproj"; sourceTree = "<group>"; };
+		F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PerfectServer.xcodeproj; path = "../../Perfect-release-1.0-2.1/PerfectServer/PerfectServer.xcodeproj"; sourceTree = "<group>"; };
+		F06C29101D7E34CC001C3EF6 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../../Perfect-release-1.0-2.1/Connectors/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
+		F06C291E1D7E3519001C3EF6 /* PerfectlySwiftClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectlySwiftClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06C29201D7E3519001C3EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F06C29221D7E3519001C3EF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F06C29251D7E3519001C3EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F06C29271D7E3519001C3EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F06C292A1D7E3519001C3EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F06C292C1D7E3519001C3EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06C29301D7E3556001C3EF6 /* PerfectHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfectHandlers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +117,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C29191D7E34D2001C3EF6 /* MySQL.framework in Frameworks */,
+				F06C290D1D7E2C82001C3EF6 /* PerfectLib.framework in Frameworks */,
+				F06C290E1D7E2C82001C3EF6 /* PerfectLib.framework in Frameworks */,
+				F06C290F1D7E2C82001C3EF6 /* PostgreSQL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06C291B1D7E3519001C3EF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06C29321D7E5053001C3EF6 /* PerfectLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,7 +138,12 @@
 		F06C28D61D7D3065001C3EF6 = {
 			isa = PBXGroup;
 			children = (
+				F06C29101D7E34CC001C3EF6 /* MySQL.xcodeproj */,
+				F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */,
+				F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */,
+				F06C28EB1D7E2BAB001C3EF6 /* PostgreSQL.xcodeproj */,
 				F06C28E21D7D3065001C3EF6 /* PerfectlySwift */,
+				F06C291F1D7E3519001C3EF6 /* PerfectlySwiftClient */,
 				F06C28E11D7D3065001C3EF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F06C28E01D7D3065001C3EF6 /* PerfectlySwift.framework */,
+				F06C291E1D7E3519001C3EF6 /* PerfectlySwiftClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +161,61 @@
 			isa = PBXGroup;
 			children = (
 				F06C28E31D7D3065001C3EF6 /* PerfectlySwift.h */,
+				F06C29301D7E3556001C3EF6 /* PerfectHandlers.swift */,
 				F06C28E51D7D3065001C3EF6 /* Info.plist */,
 			);
 			path = PerfectlySwift;
+			sourceTree = "<group>";
+		};
+		F06C28EC1D7E2BAB001C3EF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06C28F21D7E2BAB001C3EF6 /* PostgreSQL.framework */,
+				F06C28F41D7E2BAB001C3EF6 /* PostgreSQLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F06C28F61D7E2BB3001C3EF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06C28FC1D7E2BB3001C3EF6 /* PerfectLib.framework */,
+				F06C28FE1D7E2BB3001C3EF6 /* PerfectLibOSXTests.xctest */,
+				F06C29001D7E2BB3001C3EF6 /* PerfectLib.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F06C29021D7E2BBA001C3EF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06C29081D7E2BBA001C3EF6 /* perfectserverfcgi */,
+				F06C290A1D7E2BBA001C3EF6 /* perfectserverhttp */,
+				F06C290C1D7E2BBA001C3EF6 /* PerfectServer HTTP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F06C29111D7E34CC001C3EF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06C29161D7E34CC001C3EF6 /* MySQL.framework */,
+				F06C29181D7E34CC001C3EF6 /* MySQLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F06C291F1D7E3519001C3EF6 /* PerfectlySwiftClient */ = {
+			isa = PBXGroup;
+			children = (
+				F06C29201D7E3519001C3EF6 /* AppDelegate.swift */,
+				F06C29221D7E3519001C3EF6 /* MainViewController.swift */,
+				F06C29241D7E3519001C3EF6 /* Main.storyboard */,
+				F06C29271D7E3519001C3EF6 /* Assets.xcassets */,
+				F06C29291D7E3519001C3EF6 /* LaunchScreen.storyboard */,
+				F06C292C1D7E3519001C3EF6 /* Info.plist */,
+			);
+			path = PerfectlySwiftClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +250,37 @@
 			productReference = F06C28E01D7D3065001C3EF6 /* PerfectlySwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F06C291D1D7E3519001C3EF6 /* PerfectlySwiftClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F06C292D1D7E3519001C3EF6 /* Build configuration list for PBXNativeTarget "PerfectlySwiftClient" */;
+			buildPhases = (
+				F06C291A1D7E3519001C3EF6 /* Sources */,
+				F06C291B1D7E3519001C3EF6 /* Frameworks */,
+				F06C291C1D7E3519001C3EF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfectlySwiftClient;
+			productName = PerfectlySwiftClient;
+			productReference = F06C291E1D7E3519001C3EF6 /* PerfectlySwiftClient.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F06C28D71D7D3065001C3EF6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = MobileDen;
 				TargetAttributes = {
 					F06C28DF1D7D3065001C3EF6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F06C291D1D7E3519001C3EF6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -104,22 +291,125 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F06C28D61D7D3065001C3EF6;
 			productRefGroup = F06C28E11D7D3065001C3EF6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F06C29111D7E34CC001C3EF6 /* Products */;
+					ProjectRef = F06C29101D7E34CC001C3EF6 /* MySQL.xcodeproj */;
+				},
+				{
+					ProductGroup = F06C28F61D7E2BB3001C3EF6 /* Products */;
+					ProjectRef = F06C28F51D7E2BB3001C3EF6 /* PerfectLib.xcodeproj */;
+				},
+				{
+					ProductGroup = F06C29021D7E2BBA001C3EF6 /* Products */;
+					ProjectRef = F06C29011D7E2BBA001C3EF6 /* PerfectServer.xcodeproj */;
+				},
+				{
+					ProductGroup = F06C28EC1D7E2BAB001C3EF6 /* Products */;
+					ProjectRef = F06C28EB1D7E2BAB001C3EF6 /* PostgreSQL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F06C28DF1D7D3065001C3EF6 /* PerfectlySwift */,
+				F06C291D1D7E3519001C3EF6 /* PerfectlySwiftClient */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F06C28F21D7E2BAB001C3EF6 /* PostgreSQL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PostgreSQL.framework;
+			remoteRef = F06C28F11D7E2BAB001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C28F41D7E2BAB001C3EF6 /* PostgreSQLTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PostgreSQLTests.xctest;
+			remoteRef = F06C28F31D7E2BAB001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C28FC1D7E2BB3001C3EF6 /* PerfectLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PerfectLib.framework;
+			remoteRef = F06C28FB1D7E2BB3001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C28FE1D7E2BB3001C3EF6 /* PerfectLibOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PerfectLibOSXTests.xctest;
+			remoteRef = F06C28FD1D7E2BB3001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C29001D7E2BB3001C3EF6 /* PerfectLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PerfectLib.framework;
+			remoteRef = F06C28FF1D7E2BB3001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C29081D7E2BBA001C3EF6 /* perfectserverfcgi */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = perfectserverfcgi;
+			remoteRef = F06C29071D7E2BBA001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C290A1D7E2BBA001C3EF6 /* perfectserverhttp */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = perfectserverhttp;
+			remoteRef = F06C29091D7E2BBA001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C290C1D7E2BBA001C3EF6 /* PerfectServer HTTP.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "PerfectServer HTTP.app";
+			remoteRef = F06C290B1D7E2BBA001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C29161D7E34CC001C3EF6 /* MySQL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MySQL.framework;
+			remoteRef = F06C29151D7E34CC001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06C29181D7E34CC001C3EF6 /* MySQLTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MySQLTests.xctest;
+			remoteRef = F06C29171D7E34CC001C3EF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F06C28DE1D7D3065001C3EF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06C291C1D7E3519001C3EF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06C292B1D7E3519001C3EF6 /* LaunchScreen.storyboard in Resources */,
+				F06C29281D7E3519001C3EF6 /* Assets.xcassets in Resources */,
+				F06C29261D7E3519001C3EF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,10 +420,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C29311D7E3556001C3EF6 /* PerfectHandlers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06C291A1D7E3519001C3EF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06C29231D7E3519001C3EF6 /* MainViewController.swift in Sources */,
+				F06C29211D7E3519001C3EF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F06C29241D7E3519001C3EF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F06C29251D7E3519001C3EF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F06C29291D7E3519001C3EF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F06C292A1D7E3519001C3EF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F06C28E61D7D3065001C3EF6 /* Debug */ = {
@@ -227,36 +546,74 @@
 		F06C28E91D7D3065001C3EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(CONFIGURATION_BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = PerfectlySwift/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = /PerfectLibraries;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.MobileDen.PerfectlySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F06C28EA1D7D3065001C3EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(CONFIGURATION_BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = PerfectlySwift/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = /PerfectLibraries;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.MobileDen.PerfectlySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+		F06C292E1D7E3519001C3EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PerfectlySwiftClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.MobileDen.PerfectlySwiftClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F06C292F1D7E3519001C3EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PerfectlySwiftClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.MobileDen.PerfectlySwiftClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -277,6 +634,15 @@
 			buildConfigurations = (
 				F06C28E91D7D3065001C3EF6 /* Debug */,
 				F06C28EA1D7D3065001C3EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F06C292D1D7E3519001C3EF6 /* Build configuration list for PBXNativeTarget "PerfectlySwiftClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F06C292E1D7E3519001C3EF6 /* Debug */,
+				F06C292F1D7E3519001C3EF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
